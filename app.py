@@ -2,6 +2,22 @@ import streamlit as st
 import preprocessor, helper
 import matplotlib.pyplot as plt
 import seaborn as sb
+# Add a mark and text for user instructions
+st.sidebar.markdown("**Click here to upload a WhatsApp chat file for analysis**")
+
+# Disable scrolling on mobile devices
+st.markdown(
+    """
+    <style>
+    @media (max-width: 700px) {
+        body {
+            overflow: hidden;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 st.sidebar.title("Whatsapp Chat Analyser")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
