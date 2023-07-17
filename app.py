@@ -8,35 +8,8 @@ import seaborn as sb
 st.write("# Welcome to the WhatsApp Chat Analyzer")
 st.markdown("#### ⬅️ Click the sidebar to upload your chat file for analysis")
 
-# Disable scrolling on mobile devices
-st.markdown(
-    """
-    <style>
-    @media (max-width: 700px) {
-        body {
-            overflow: hidden;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
 st.sidebar.markdown("**Click here to upload a WhatsApp chat file for analysis**")
 
-# Disable scrolling on mobile devices
-st.markdown(
-    """
-    <style>
-    @media (max-width: 700px) {
-        body {
-            overflow: hidden;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 st.sidebar.title("Whatsapp Chat Analyser")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
@@ -162,6 +135,7 @@ footer_html = """
     }
     </style>
     <div class="footer">
+         <span><b>Disclaimer:</b> For better experience use desktop!</span> <br/>
         <span>Made with 💜 by Rajvi Desai</span> <br/>
         <span>Reach out to me <a href="https://www.linkedin.com/in/rajvidesai12/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-blue?logo=linkedin&logoColor=white&style=flat"></a></span>
     </div>
