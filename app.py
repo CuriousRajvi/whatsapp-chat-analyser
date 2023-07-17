@@ -114,6 +114,25 @@ if uploaded_file is not None:
         ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(), autopct="%.2f")
         st.pyplot(fig)
 
+footer_html = """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        padding: 8px 16px;
+        text-align: center;
+        color: black
+    }
+    </style>
+    <div class="footer">
+        <span>Made with 💜 by Rajvi Desai</span> <br/>
+        <span>Reach out to me <a href="https://www.linkedin.com/in/rajvidesai12/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-blue?logo=linkedin&logoColor=white&style=flat"></a></span>
+    </div>
+"""
+st.markdown(footer_html, unsafe_allow_html=True)
 
 
 
