@@ -2,7 +2,26 @@ import streamlit as st
 import preprocessor, helper
 import matplotlib.pyplot as plt
 import seaborn as sb
+
 # Add a mark and text for user instructions
+# Add attention-grabbing message and icon on the home page
+st.write("# Welcome to the WhatsApp Chat Analyzer")
+st.markdown("#### ⬅️ Click the sidebar to upload your chat file for analysis")
+
+# Disable scrolling on mobile devices
+st.markdown(
+    """
+    <style>
+    @media (max-width: 700px) {
+        body {
+            overflow: hidden;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 st.sidebar.markdown("**Click here to upload a WhatsApp chat file for analysis**")
 
 # Disable scrolling on mobile devices
@@ -129,7 +148,6 @@ if uploaded_file is not None:
         fig, ax = plt.subplots()
         ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(), autopct="%.2f")
         st.pyplot(fig)
-
 footer_html = """
     <style>
     .footer {
@@ -149,6 +167,5 @@ footer_html = """
     </div>
 """
 st.markdown(footer_html, unsafe_allow_html=True)
-
 
 
