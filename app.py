@@ -137,7 +137,7 @@ footer_html = """
     <div class="footer">
          <span><b>Disclaimer:</b> For better experience use desktop!</span> <br/>
         <span>Made with 💜 by Rajvi Desai</span> <br/>
-        <span>Reach out to me <a href="https://www.linkedin.com/in/rajvidesai12/" target="_blank"><img src="li.jpg" alt="Linkedin"></a></span>
+        <span>Reach out to me <a href="https://www.linkedin.com/in/rajvidesai12/" target="_blank">Linkedin</a></span>
     </div>
 """
 st.markdown(footer_html, unsafe_allow_html=True)
